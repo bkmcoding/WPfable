@@ -1,3 +1,35 @@
+@font-face {
+  font-family: "Libron";
+  src: url("./fonts/Libron-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libron";
+  src: url("./fonts/Libron-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libron";
+  src: url("./fonts/Libron-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libron";
+  src: url("./fonts/Libron-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --font-story: "Libron", "Libron Web", "Libron Serif", "Libre Baskerville", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
   --paper: #f7f3ea;
@@ -26,7 +58,9 @@ body {
   font-family: var(--font-story);
   font-size: clamp(1.05rem, 1rem + 0.28vw, 1.2rem);
   line-height: 1.72;
+  font-feature-settings: "liga" 1, "kern" 1;
   font-variant-numeric: oldstyle-nums;
+  font-synthesis: none;
 }
 
 .book {
