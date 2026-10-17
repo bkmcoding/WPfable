@@ -132,10 +132,25 @@ h1 {
 
 .scene {
   display: flow-root;
+  margin-block-start: 2.75rem;
 }
 
-.scene + .scene {
-  margin-block-start: 2.75rem;
+.scene:first-of-type {
+  margin-block-start: 0;
+}
+
+.scene--pillar {
+  margin-block-start: 0;
+}
+
+.transition {
+  display: none;
+}
+
+.transition-art {
+  display: block;
+  width: 7.25rem;
+  height: auto;
 }
 
 .scene p {
@@ -161,6 +176,7 @@ h1 {
 .pull-quote {
   max-width: 38ch;
   margin: 3rem auto 2.5rem;
+  clear: right;
   padding-block: 1.25rem;
   border-block: 1px solid var(--rule-soft);
   color: var(--accent);
@@ -232,6 +248,18 @@ figure.art figcaption {
   text-underline-offset: 0.16em;
 }
 
+.art-sources {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.82rem;
+  text-align: center;
+}
+
+.art-sources li + li {
+  margin-top: 0.35rem;
+}
+
 a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -252,6 +280,13 @@ a:focus-visible {
 
   .scene p + p {
     text-indent: 1.5em;
+  }
+
+  .transition {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-block: 1rem;
   }
 
   figure.art,
